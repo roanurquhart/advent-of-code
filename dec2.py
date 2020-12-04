@@ -1,5 +1,6 @@
 import sys
 from collections import Counter
+from helpers import read_input
 
 def password_philosophy_part1() :
     passwords = parse_input(read_input())
@@ -35,11 +36,6 @@ class Password:
         return "Password pass:%s range:%s letter:%s" % (self.password, self.range, self.letter)
 
 ## Parsers
-def read_input():
-    with open(sys.argv[1], "r") as statefile:
-        data = statefile.readlines()
-    return data
-
 def parse_input(data) :
     passwords = []
     for line in data:
